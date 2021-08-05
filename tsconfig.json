@@ -1,0 +1,21 @@
+{
+   "compilerOptions": {
+      "target": "ES2017",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./dist",
+      "allowJs": true,
+      "esModuleInterop": true,
+      "baseUrl": "src",
+      "strict": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "skipLibCheck": true,
+      "paths": {
+        "@shared/*": ["shared/*"],
+        "@modules/*": ["modules/*"],
+        "@config/*": ["config/*"]
+      }
+   }
+}
