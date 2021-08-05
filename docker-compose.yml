@@ -1,0 +1,39 @@
+version: '3.6'
+
+networks:
+  sell_api-network:
+    driver: bridge
+
+services:
+  postgres:
+    container_name: happy-postgres
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      - ALLOW_EMPTY_PASSWORD=no
+      - POSTGRES_USERNAME=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - /tmp/postgres:/bitnami
+    networks:
+      - happy-network
+
+  redis:
+    image: bitnami/redis:latest
+    # Add this user because this image has to be a root
+    user: root
+    container_name: happy-redis
+    restart: unless-stopped
+    environment:
+      - ALLOW_EMPTY_PASSWORD=no
+      - REDIS_PASSWORD=${REDIS_PASS}
+    ports:
+      - "6379:6379"
+    volumes:
+      - /tmp/redis:/bitnami/redis/data
+    networks:
+      - happy-network
