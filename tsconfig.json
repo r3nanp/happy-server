@@ -1,21 +1,26 @@
 {
-   "compilerOptions": {
-      "target": "ES2017",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "outDir": "./dist",
-      "allowJs": true,
-      "esModuleInterop": true,
-      "baseUrl": "src",
-      "strict": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "sourceMap": true,
-      "skipLibCheck": true,
-      "paths": {
-        "@shared/*": ["shared/*"],
-        "@modules/*": ["modules/*"],
-        "@config/*": ["config/*"]
-      }
-   }
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "allowJs": true,
+    "outDir": "./dist",
+    "typeRoots": ["@types", "./node_modules/@types"],
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@modules/*": ["modules/*"],
+      "@config/*": ["config/*"]
+    }
+  },
+  "include": ["./src"]
 }
