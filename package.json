@@ -3,7 +3,7 @@
       "start:server": "node dist/shared/infra/http/server.js",
       "build": "tsc",
       "dev": "tsnd --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/shared/infra/http/server.ts",
-      "typeorm": "tsnd -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+      "typeorm": "tsnd ./node_modules/typeorm/cli.js"
    },
    "devDependencies": {
       "@types/cors": "^2.8.12",
@@ -11,13 +11,17 @@
       "@types/node": "^8.0.29",
       "dotenv": "^10.0.0",
       "reflect-metadata": "^0.1.13",
+      "ts-node-dev": "^1.1.8",
       "tsconfig-paths": "^3.10.1",
       "typescript": "^4.3.5"
    },
    "dependencies": {
       "cors": "^2.8.5",
       "express": "^4.17.1",
-      "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.36"
+      "express-async-errors": "^3.1.1",
+      "pg": "^8.7.1",
+      "typeorm": "0.2.36",
+      "uuid": "^8.3.2",
+      "yup": "^0.32.9"
    }
 }
