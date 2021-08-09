@@ -1,7 +1,7 @@
 version: '3.6'
 
 networks:
-  sell_api-network:
+  happy-network:
     driver: bridge
 
 services:
