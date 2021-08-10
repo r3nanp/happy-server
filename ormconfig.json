@@ -1,16 +1,16 @@
 {
   "type": "postgres",
   "username": "postgres",
-  "password": "password",
-  "database": "sellapi",
+  "password": "docker",
+  "database": "happy",
   "port": 5432,
   "migrations": [
-    "./src/shared/infra/typeorm/migrations/*.ts"
+    "./src/infra/typeorm/migrations/*.ts"
   ],
   "entities": [
-    "./src/modules/**/infra/typeorm/entities/*.entity.ts"
+    "./src/modules/**/typeorm/entities/*.entity.ts"
   ],
   "cli": {
-    "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    "migrationsDir": "./src/infra/typeorm/migrations"
   }
 }
