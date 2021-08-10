@@ -20,7 +20,8 @@
       "@infra/*": ["infra/*"],
       "@core/*": ["core/*"],
       "@config/*": ["config/*"],
-      "@errors/*": ["errors/*"]
+      "@errors/*": ["errors/*"],
+      "@modules/*": ["modules/*"]
     }
   },
   "include": ["./src"]
