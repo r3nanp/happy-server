@@ -17,9 +17,10 @@
     "sourceMap": true,
     "baseUrl": "./src",
     "paths": {
-      "@shared/*": ["shared/*"],
-      "@modules/*": ["modules/*"],
-      "@config/*": ["config/*"]
+      "@infra/*": ["infra/*"],
+      "@core/*": ["core/*"],
+      "@config/*": ["config/*"],
+      "@errors/*": ["errors/*"]
     }
   },
   "include": ["./src"]
