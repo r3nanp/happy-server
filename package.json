@@ -2,12 +2,13 @@
    "scripts": {
       "start:server": "node dist/shared/infra/http/server.js",
       "build": "tsc",
-      "dev": "tsnd --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/shared/infra/http/server.ts",
-      "typeorm": "tsnd ./node_modules/typeorm/cli.js"
+      "dev": "tsnd --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/infra/http/server.ts",
+      "typeorm": "tsnd -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
    },
    "devDependencies": {
       "@types/cors": "^2.8.12",
       "@types/express": "^4.17.13",
+      "@types/multer": "^1.4.7",
       "@types/node": "^8.0.29",
       "@types/uuid": "^8.3.1",
       "dotenv": "^10.0.0",
@@ -20,6 +21,7 @@
       "cors": "^2.8.5",
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
+      "multer": "^1.4.3",
       "pg": "^8.7.1",
       "typeorm": "0.2.36",
       "uuid": "^8.3.2",
