@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 app.use(routes)
 
-app.use('/files', express.static(upload.directory))
+app.use('/uploads', express.static(upload.directory))
 
 app.use(
   (
