@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
 import { getRepository } from "typeorm"
 import { Orphanage } from "@modules/orphanages/infra/typeorm/entities/orphanage.entity"
+import { orphanageView } from "@modules/orphanages/views/Orphanage"
 
 export class ShowOrphanageController {
   async show(request: Request, response: Response) {
@@ -12,6 +13,6 @@ export class ShowOrphanageController {
       relations: ['images'],
     })
 
-    return response.status(200).json(orphanage)
+    return response.status(200).json(orphanageView.render(orphanage))
   }
 }
