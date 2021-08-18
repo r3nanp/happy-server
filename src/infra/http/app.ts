@@ -4,6 +4,7 @@ import 'express-async-errors'
 
 import express, { NextFunction, Request, Response } from 'express'
 import cors from 'cors'
+import 'container/index'
 import { routes } from './routes/app.routes'
 import { AppError } from '@errors/AppError'
 import { upload } from '@config/upload'
